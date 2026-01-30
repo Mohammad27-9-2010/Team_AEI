@@ -1,0 +1,155 @@
+:root{
+  --navy:#0A1A2F;
+  --royal:#123D6B;
+  --midblue:#1F5A96;
+  --lightblue:#E8F1FA;
+  --accent:#1E7F4F;
+  --white:#ffffff;
+  --gray:#6B7280;
+}
+
+/* RESET */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:var(--white);
+  color:var(--navy);
+  line-height:1.8;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+.topbar{
+  background:var(--navy);
+  padding:12px 0;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 10px;
+  font-weight:600;
+  font-size:15px;
+}
+
+.logo{height:48px}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,var(--navy),var(--royal));
+  color:#fff;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.hero h1{font-size:28px;margin-bottom:10px}
+.hero p{opacity:.95}
+
+/* SECTIONS */
+section{padding:50px 0}
+.section-light{background:var(--lightblue)}
+
+/* HEADINGS */
+h1,h2,h3{margin-bottom:12px}
+
+/* BUTTONS */
+.btn{
+  padding:12px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:10px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.btn-primary{
+  background:var(--midblue);
+  color:#fff;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.btn-primary:hover{background:var(--royal)}
+
+.btn-outline{
+  border:2px solid #fff;
+  color:#fff;
+}
+
+/* CARDS */
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  margin:15px 0;
+}
+
+.course-card{
+  border-right:5px solid var(--midblue);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+@media(min-width:768px){
+  .grid{grid-template-columns:1fr 1fr}
+}
+
+/* QUOTE BLOCK */
+blockquote{
+  background:var(--lightblue);
+  padding:20px;
+  border-right:4px solid var(--midblue);
+  font-style:italic;
+}
+
+/* VERIFY FORM */
+input{
+  padding:10px;
+  width:100%;
+  max-width:350px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  margin:10px 0;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:30px 0;
+  margin-top:40px;
+  font-size:14px;
+}
+
+/* IMAGES */
+img{
+  max-width:100%;
+  height:auto;
+  border-radius:8px;
+}
+
+/* MOBILE TWEAKS */
+@media(max-width:600px){
+  .nav{flex-direction:column}
+  .nav a{margin:6px 0}
+  .hero h1{font-size:22px}
+}
