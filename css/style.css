@@ -143,6 +143,49 @@ input{
 /* IMAGES */
 img{
   max-width:100%;
+  /* METRICS SECTION */
+.metrics{
+  padding:60px 0;
+}
+
+.metrics-grid{
+  display:grid;
+  gap:20px;
+}
+
+@media(min-width:768px){
+  .metrics-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* METAMORPHIC CARD STYLE */
+.metric-card{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(8px);
+  border-radius:16px;
+  padding:35px 20px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.3);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.metric-card h3{
+  font-size:32px;
+  color:var(--midblue);
+  margin-bottom:10px;
+}
+
+.metric-card p{
+  color:var(--navy);
+  font-weight:600;
+}
+
+/* Hover Zoom Effect */
+.metric-card:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 16px 35px rgba(0,0,0,0.12);
+}
+
   height:auto;
   border-radius:8px;
 }
@@ -153,3 +196,4 @@ img{
   .nav a{margin:6px 0}
   .hero h1{font-size:22px}
 }
+
