@@ -198,3 +198,50 @@ img{
   .nav a{margin:6px 0}
   .hero h1{font-size:22px}
 }
+/* GLOBAL PRESENCE TICKER */
+.global-presence{
+  background:var(--navy);
+  color:#fff;
+  padding:40px 0 20px;
+  overflow:hidden;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:22px;
+}
+
+/* Ticker container */
+.ticker{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+/* Moving track */
+.ticker-track{
+  display:flex;
+  gap:40px;
+  width:max-content;
+  animation:scrollTicker 35s linear infinite;
+}
+
+/* Country items */
+.ticker-track span{
+  white-space:nowrap;
+  font-weight:600;
+  font-size:16px;
+  opacity:.9;
+  padding:8px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+/* Animation */
+@keyframes scrollTicker{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
